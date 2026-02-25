@@ -1,5 +1,4 @@
-_start
-%include "io64.inc"
+%include "io.inc"
 
 extern printf
 
@@ -11,7 +10,8 @@ section .text
 global main
 
 main:
-    mov rcx, mensaje
+    push mensaje
     call printf
-    
+    add esp, 4
+
     ret
