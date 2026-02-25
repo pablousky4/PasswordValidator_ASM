@@ -1,17 +1,17 @@
-;hola mundo
+_start
+%include "io64.inc"
+
 extern printf
-extern ExitProcess
 
 section .data
-    mensaje db "Hola mundo", 10, 0
+    password db "1234", 0
+    mensaje db "Sistema iniciado", 10, 0
 
 section .text
-    global main
+global main
 
 main:
-    push mensaje
+    mov rcx, mensaje
     call printf
-    add esp, 4
-
-    push 0
-    call ExitProcess
+    
+    ret
