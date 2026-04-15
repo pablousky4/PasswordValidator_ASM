@@ -1,5 +1,6 @@
 # Validador de Contraseñas en Ensamblador (32 bits)
 ¡Hola! Este pequeño proyecto es un programa escrito en lenguaje Ensamblador de 32 bits (arquitectura x86). Su función es muy sencilla: te pide que ingreses una contraseña por teclado y te dice si has acertado o no.
+
 Este proyecto ha sido realizado por Pablo Castro Rodríguez Y Álvaro Jorge González
 
 La contraseña secreta configurada por defecto es 1234.
