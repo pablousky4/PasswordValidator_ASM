@@ -1,5 +1,5 @@
-extern printf          ; declara función printf externa (C)
-extern scanf           ; declara función scanf externa (C)
+extern printf          ; declara función printf externa 
+extern scanf           ; declara función scanf externa 
 
 section .data          ; sección de datos (constantes)
     msg_prompt db "Introduce la contrasena: ", 0   ; mensaje de entrada
