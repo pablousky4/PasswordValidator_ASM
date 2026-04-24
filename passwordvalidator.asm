@@ -5,7 +5,7 @@ section .data          ; sección de datos (constantes)
     msg_prompt db "Introduce la contrasena: ", 0   ; mensaje de entrada
     msg_ok     db "Correcta!", 10, 0               ; mensaje si acierta
     msg_fail   db "Incorrecta!", 10, 0             ; mensaje si falla
-    format_in  db "%s", 0                          ; formato string para scanf
+    format_in db "%63s", 0                         ; formato string para scanf, se limita a 63 caracteres introducidos
     pwd        db "1234", 0                        ; contraseña correcta
 
 section .bss           ; sección de variables sin inicializar
@@ -20,7 +20,7 @@ main:
     add esp, 4         ; limpia la pila
 
     push input_pwd     ; dirección donde guardar entrada
-    push format_in     ; formato "%s"
+    push format_in     ; formato "%63s"
     call scanf         ; lee string del usuario
     add esp, 8         ; limpia la pila
 
